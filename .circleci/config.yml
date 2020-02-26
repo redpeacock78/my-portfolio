@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  deploy_master: my-portfolio
+  deploy_master:
     docker:
       - image: circleci/node:latest
     steps:
@@ -22,7 +22,7 @@ workflows:
   version: 2
   deploy_master:
     jobs:
-      - deploy_master
+      - deploy_master:
         filters:
           branches:
             only: master
