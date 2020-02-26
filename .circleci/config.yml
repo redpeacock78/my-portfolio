@@ -1,16 +1,35 @@
 version: 2.1
-jobs:
-  deploy_master:
+
+references:
+  container_config: &container_config
     docker:
       - image: circleci/node:latest
+    working_directory: /home/circleci/project
+
+  node_modules_cache_params: &node_modules_cache_params
+    key: yarn-packages-{{ .Branch }}-{{ checksum "./yarn.lock" }}
+    paths:
+      - node_modules
+
+jobs:
+  deploy_master:
+    <<: *container_config
     steps:
       - checkout
+      - restore_cache:
+        name: Restore Cache.
+        <<: *node_modules_cache_params
       - run:
         name: Clone submodule
-        command: git submodule init && git submodule update
+        command: |
+          git submodule init && \
+          git submodule update
       - run:
         name: yarn install
         command: yarn install --flozen-lockfile
+      - save_cache:
+        name: Saving Cache.
+        <<: *node_modules_cache_params
       - run:
         name: Compile scss
         command: node_modules/.bin/gulp
@@ -19,8 +38,8 @@ jobs:
         command: npx firebase-tools deploy --token=$FIREBASE_TOKEN
 
 workflows:
-  version: 2
-  deploy_master:
+  version: 2.1
+  deploy_to_firebase:
     jobs:
       - deploy_master:
         filters:
