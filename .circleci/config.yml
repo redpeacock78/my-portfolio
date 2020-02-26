@@ -1,13 +1,28 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
-# Use a package of configuration called an orb.
-orbs:
-  # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.4.1
-# Orchestrate or schedule a set of jobs
+jobs:
+  deploy_master: my-portfolio
+    docker:
+      - image: circleci/node:10.7
+    steps:
+      - checkout
+      - run:
+        name: Clone submodule
+        command: git submodule init && git submodule update
+      - run:
+        name: yarn install
+        command: yarn install --flozen-lockfile
+      - run:
+        name: Compile scss
+        command: node_modules/.bin/gulp
+      - run:
+        name: Deploy to Firebase
+        command: npx firebase-tools deploy --token=$FIREBASE_TOKEN
+
 workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
+  version: 2
+  deploy_master:
     jobs:
-      - welcome/run
+      - deploy_master
+        filters:
+          branches:
+            only: master
