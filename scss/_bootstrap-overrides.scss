@@ -1,0 +1,18 @@
+.bg-primary {
+  background-color: $pastel-blue !important;
+}
+
+.text-primary {
+  @include subhead-font;
+  font-size: 1.5rem; 
+  color: darken($pastel-blue, 20%) !important;
+}
+
+a {
+  color: $pastel-orange;
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($pastel-orange, 15%);
+  }
+}
