@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   deploy_master: my-portfolio
     docker:
-      - image: circleci/node:10.7
+      - image: circleci/node:latest
     steps:
       - checkout
       - run:
