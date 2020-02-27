@@ -13,7 +13,7 @@ jobs:
             git submodule update
       - run:
           name: yarn install
-          command: yarn install --flozen-lockfile
+          command: yarn upgrade
       - run:
           name: Compile scss
           command: node_modules/.bin/gulp
