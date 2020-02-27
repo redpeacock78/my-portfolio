@@ -4,279 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
-@charset "UTF-8";
-@font-face {
-  font-family: "しねきゃぷしょん";
-  src: url("/fonts/cinecaption/cinecaption.eot");
-  src: url("/fonts/cinecaption/cinecaption.ttf") format("truetype"), url("/fonts/cinecaption/cinecaption.eot?#iefix") format("embedded-opentype"), url("/fonts/cinecaption/cinecaption.woff2") format("woff2"), url("/fonts/cinecaption/cinecaption.woff") format("woff"), url("/fonts/cinecaption/cinecaption.svg#cinecaptionregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Sacramento";
-  src: url("/fonts/sacramento/Sacramento-Regular.eot");
-  src: url("/fonts/sacramento/Sacramento-Regular.eot#iefix") format("embedded-opentype"), url("/fonts/sacramento/Sacramento-Regular.woff") format("woff"), url("/fonts/sacramento/sacramento-regular.woff2") format("woff2"), url("/fonts/sacramento/Sacramento-Regular.ttf") format("truetype"), url("/fonts/sacramento/Sacramento-Regular.svg#Sacramento-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Simplifica";
-  src: url("/fonts/simplifica/simplifica_typeface-webfont.eot");
-  src: url("/fonts/simplifica/SIMPLIFICA Typeface.ttf") format("truetype"), url("/fonts/simplifica/simplifica_typeface-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/simplifica/simplifica_typeface-webfont.woff2") format("woff2"), url("/fonts/simplifica/simplifica_typeface-webfont.woff") format("woff"), url("/fonts/simplifica/simplifica_typeface-webfont.svg#simplificasimplifica") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'iconfont';
-  src: url("/fonts/iconfont/iconfont.eot?vqsy1l");
-  src: url("/fonts/iconfont/iconfont.eot?vqsy1l#iefix") format("embedded-opentype"), url("/fonts/iconfont/iconfont.ttf?vqsy1l") format("truetype"), url("/fonts/iconfont/iconfont.woff?vqsy1l") format("woff"), url("/fonts/iconfont/iconfont.svg?vqsy1l#iconfont") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'iconfont' !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-hg:before {
-  content: "\e900";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-vagrant:before {
-  content: "\e901";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-circleci:before {
-  content: "\e902";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-niconico:before {
-  content: "\e904";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 1em;
-  vertical-align: middle;
-}
-
-.icon-bilibili:before {
-  content: "\e905";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 1.3em;
-  vertical-align: -15%;
-}
-
-.icon-typescript:before {
-  content: "\e906";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2.6rem;
-}
-
-.icon-clipstudio:before {
-  content: "\e907";
-  display: inline-block;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-.icon-photoshop:before {
-  content: "\e908";
-  display: inline-block;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-.icon-firebase:before {
-  content: "\e909";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-gas:before {
-  content: "\e90a";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-bash:before {
-  content: "\e90b";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-imagemagick:before {
-  content: "\e90c";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 3.5rem;
-  vertical-align: middle;
-}
-
-.icon-alpine:before {
-  content: "\e91f";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2.6rem;
-}
-
-.icon-cloud9:before {
-  content: "\e90d";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 3.5rem;
-}
-
-.icon-gitpod:before {
-  content: "\e90e";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-eclipse:before {
-  content: "\e90f";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-vnc:before {
-  content: "\e910";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-atom:before {
-  content: "\e911";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-remoteit:before {
-  content: "\e919";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-virtualbox:before {
-  content: "\e91a";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-vscode:before {
-  content: "\e91b";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-sublimetext:before {
-  content: "\e91c";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-vim:before {
-  content: "\e91d";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-ffmpeg:before {
-  content: "\e91e";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 4rem;
-  vertical-align: middle;
-}
-
-.icon-ssh:before {
-  content: "\e913";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-ifttt:before {
-  content: "\e912";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-hexo:before {
-  content: "\e918";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 3.5rem;
-}
-
-.icon-bootstrap:before {
-  content: "\e917";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-gce:before {
-  content: "\e916";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-heroku:before {
-  content: "\e915";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-mosh:before {
-  content: "\e914";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-onivim:before {
-  content: "\e920";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-neovim:before {
-  content: "\e924";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-brackets:before {
-  content: "\e921";
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icon-cloudinary:before {
-  content: "\e922";
-  display: inline-block;
-  text-decoration: none;
-  font-size: 3.5rem;
-  vertical-align: -15%;
-}
-
 body {
-  font-family: 'しねきゃぷしょん', "Cormorant Garamond", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'cinecaption', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
   color: #868e96;
 }
@@ -289,14 +18,14 @@ body {
 }
 
 h1 {
-  font-family: "Sacramento", "Simplifica", 'しねきゃぷしょん', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Sacramento", "Simplifica", 'cinecaption', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
   color: #343a40;
 }
 
 h2,
 h3 {
-  font-family: "Sacramento", "Simplifica", 'しねきゃぷしょん', 'Noto Serif JP', 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Sacramento", "Simplifica", 'cinecaption', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
   color: #343a40;
 }
@@ -304,7 +33,7 @@ h3 {
 h4,
 h5,
 h6 {
-  font-family: "Simplifica", 'しねきゃぷしょん', 'Noto Serif JP', 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Simplifica", 'cinecaption',  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
   color: #343a40;
 }
@@ -337,7 +66,7 @@ p.lead {
 
 .subheading {
   font-weight: 500;
-  font-family: "Simplifica", 'しねきゃぷしょん', 'Noto Serif JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Simplifica", 'cinecaption', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1.5rem;
 }
 
@@ -423,7 +152,7 @@ p.lead {
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
-  font-family: "Simplifica", 'しねきゃぷしょん', 'Noto Serif JP', 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Simplifica", 'cinecaption',  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 800;
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
@@ -504,7 +233,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-  font-family: "Simplifica", 'しねきゃぷしょん', 'Noto Serif JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Simplifica", 'cinecaption', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1.5rem;
   color: #33bbff !important;
 }
