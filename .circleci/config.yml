@@ -16,10 +16,10 @@ jobs:
           command: yarn upgrade
       - run:
           name: Compile scss
-          command: node_modules/.bin/gulp
+          command: yarn build
       - run:
           name: Deploy to Firebase
-          command: npx firebase-tools deploy -m "$(git log -1 --pretty=format:'%h: %s')" --token="${FIREBASE_TOKEN}"
+          command: npx firebase-tools deploy -m "$(git log -1 --pretty=format:'%h':' %s')" --token="${FIREBASE_TOKEN}"
 
 workflows:
   version: 2.1
