@@ -19,7 +19,7 @@ jobs:
           command: node_modules/.bin/gulp
       - run:
           name: Deploy to Firebase
-          command: npx firebase-tools deploy -m "$(git log -1 --pretty=format:'%s')" --token="${FIREBASE_TOKEN}"
+          command: npx firebase-tools deploy -m "$(git log -1 --pretty=format:'%h: %s')" --token="${FIREBASE_TOKEN}"
 
 workflows:
   version: 2.1
