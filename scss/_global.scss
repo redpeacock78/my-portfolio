@@ -14,6 +14,7 @@ body {
 h1 {
   @include head1-font;
   font-weight: 700;
+  font-display: swap;
   color: $gray-800;
 }
 
@@ -21,6 +22,7 @@ h2,
 h3 {
   @include head2-3-font;
   font-weight: 700;
+  font-display: swap;
   color: $gray-800;
 }
 
@@ -29,37 +31,45 @@ h5,
 h6 {
   @include head-other-font;
   font-weight: 700;
+  font-display: swap;
   color: $gray-800;
 }
 
 h1 {
   font-size: 6rem;
+  font-display: swap;
   line-height: 5.5rem;
 }
 
 h2 {
   font-size: 3.5rem;
+  font-display: swap;
 }
 
 h3 {
   font-size: 2rem;
+  font-display: swap;
 }
 
 h4 {
   font-size: 1.5rem;
+  font-display: swap;
 }
 
 h5 {
   font-size: 1.25rem;
+  font-display: swap;
 }
 
 p.lead {
   font-size: 1.15rem;
+  font-display: swap;
   font-weight: 400;
 }
 
 .subheading {
   font-weight: 500;
+  font-display: swap;
   @include subhead-font;
   font-size: 1.5rem;
 }
@@ -74,6 +84,7 @@ p.lead {
     border-radius: 100%;
     text-align: center;
     font-size: 1.5rem;
+    font-display: swap;
     line-height: 3.5rem;
     margin-right: 1rem;
     letter-spacing: normal;
@@ -89,6 +100,7 @@ p.lead {
 
 .dev-icons {
   font-size: 3rem;
+  font-display: swap;
   .list-inline-item i {
     &:hover {
       color: darken($pastel-blue, 15%);
