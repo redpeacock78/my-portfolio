@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: k-090708.web.app
+Token: 9ceca983a7bf24124874764732ad7dfec8c86a4ad15e860e39a98ea15f78540d
