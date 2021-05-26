@@ -3,19 +3,25 @@
     "public": "/",
     "ignore": [
       "firebase.json",
-      "**/.*",
+      "**/.circleci/**",
       "**/node_modules/**"
     ],
-    "headers": [{
+    "headers": [
+      {
         "source": "**/*",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=604800"
-        }]
-    }],
-    "rewrites": [{
-      "source": "**",
-      "destination": "/index.html"
-    }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
