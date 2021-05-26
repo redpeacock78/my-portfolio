@@ -10,7 +10,7 @@ const header = require("gulp-header");
 const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+const { sass } = require("@mr-hope/gulp-sass");
 const uglify = require("gulp-uglify");
 
 // Load package.json for banner
@@ -63,9 +63,9 @@ function modules() {
     .pipe(gulp.dest('./vendor/jquery-easing'));
   // jQuery
   var jquery = gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
+    './node_modules/jquery/dist/*',
+    '!./node_modules/jquery/dist/core.js'
+  ])
     .pipe(gulp.dest('./vendor/jquery'));
   return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing);
 }
@@ -76,8 +76,7 @@ function css() {
     .src("./scss/**/*.scss")
     .pipe(plumber())
     .pipe(sass({
-      outputStyle: "expanded",
-      includePaths: "./node_modules",
+      outputStyle: "expanded"
     }))
     .on("error", sass.logError)
     .pipe(autoprefixer({
