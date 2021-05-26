@@ -19,7 +19,7 @@ jobs:
           command: yarn build
       - run:
           name: Deploy to Firebase
-          command: npx firebase-tools deploy -m "$(git log -1 --pretty=format:'%h':' %s')" --token="${FIREBASE_TOKEN}"
+          command: npx -y firebase-tools deploy -m "$(git log -1 --pretty=format:'%h':' %s')" --token="${FIREBASE_TOKEN}"
 
 workflows:
   version: 2.1
